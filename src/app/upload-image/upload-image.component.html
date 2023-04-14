@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <li>
+    <a routerLink="/">Home</a>
+  </li>
+<label for="file">Select File
+  <img [src]="imageUrl" width="250px" height="250px" alt="Image Review">
+</label>
+<input type="file" id="file" accept="image/*" hidden (change)="onSelectNewFiles($event)" >
+
+<textarea rows="10" disabled [innerHTML]="base64" ></textarea>
+<button (click)="convertFileToBase64()" >Convert Image To Base64</button>
+</div>
